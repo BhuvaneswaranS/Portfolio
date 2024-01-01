@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+:root {
+    --iconColor: #66fcf1;
+    --black: #0b0c10;
+    --gray: #1f2833;
+    --cement: #c5c6c7;
+    --mild: #45a29e;
+}
+
+body {
+    /* background-color: #0b0c10; */
+    background-image: url('./rm373batch2-09.jpg');
+    /* background-position: 100%; */
+    background-size: cover;
+    background-attachment: fixed;
+}
+a{
+    text-decoration: none;
+}
+
+.overAll {
+    /* height: 100vh; */
+    width: 100%;
+    padding: 10px;
+    
+}
+
+.flex {
+    display: flex;
+    gap: 5px;
+}
+
+ul {
+    list-style: none;
+    cursor: default;
+}
+
+.nav_bar {
+    width: 98.5%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: white; */
+    padding: 8px;
+}
+
+.overAll .nav_bar i {
+    color: var(--iconColor);
+}
+
+.logo i {
+    font-size: 40px;
+    padding-left: 10px;
+}
+
+.logo h2 {
+    font-size: 30px;
+    padding-left: 10px;
+    color: var(--cement);
+}
+
+
+.menu_bar {
+    width: 4%;
+    padding-right: 10px;
+    font-size: 20px;
+    position: relative;
+}
+
+.menu_bar input:checked~.nav_pages {
+    /* top: 0; */
+    left: -275px;
+}
+
+.menu_bar input {
+    display: none;
+}
+
+.menu_bar li {
+    padding: 0px 3px;
+}
+
+.nav_pages {
+    color: var(--cement);
+    position: absolute;
+    left: 200px;
+    z-index: 3;
+    padding: 0px 5px;
+    transition: all 0.8s;
+}
+
+
+
+/* Social media */
+
+.social{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top:40vh;
+    left: 0;
+    font-size: 21px;
+}
+.social .social_sub{
+    position: absolute;
+    top: 35px;
+    left: -100%;
+    transition: all 0.3s;
+}
+.social .social_Icon{
+    /* position: absolute; */
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: var(--gray);
+    background-color: var(--iconColor);
+}
+.social_Icon:hover{
+    transform: scale(1.1);
+}
+.content h3{
+    width: 70%;
+    font-weight: 500;
+    height: 50vh;
+    padding-left: 150px;
+    margin-top: 250px;
+    padding-right: 20px;
+    font-size: 22px;
+    /* background-color: var(--gray); */
+    color: var(--mild);
+}
+.nav_bar a{
+    color: var(--cement);
+    text-decoration: none;
+}
+.social a{
+    color: var(--black);
+}
+.social:hover .social_sub{
+    left: 0;
+}
+.content{
+    display: flex;
+}
+.profile{
+    width:30% ;
+    height: 50vh;
+    padding: 40px;
+    margin-top: 170px;
+    /* display: inline; */
+}
+.profile img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+.high{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--cement);
+    display: block;
+    padding-bottom: 20px;
+}
+.profile img:hover{
+    transform: scale(1.1);
+    /* transform: rotateY(360deg); */
+}
+.btn_spn{
+    display: flex;
+    justify-content: end;
+    padding-right: 50px;
+    /* background-color: var(--cement); */
+}
+.btn_about{
+    width: 150px ;
+    height: 35px;
+    border-width: 0;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: var(--iconColor);
+    border-radius: 50px;
+    display: block;
+    transition: all 0.3s;
+}
+.fa-user{
+    /* background-color: var(--cement); */
+    width: 30px;
+    border-left: 2px solid var(--black);
+    /* border-radius: 50%; */
+    font-size: 18px;
+    padding: 7px;
+    color: var(--gray);
+}
+button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+
+/* ---------------------------MEDIA--------------------------------- */
+
+
+@media screen and (min-width:320px) and (max-width:700px){
+    .nav_bar{
+        width: 94%;
+    }
+    .nav_pages ul{
+        flex-direction: column;
+    }
+    .menu_bar input:checked~.nav_pages {
+        left: -80px;
+        /* top: 50px; */
+    }
+    .nav_pages{
+        top: 50px;
+        background-color: var(--black);
+        gap: 15px;
+        padding: 10px;
+        padding-right: 20px;
+        transition: all 0.5s ease;
+    }
+    .nav_pages li{
+        padding: 2px;
+    }
+    .logo i{
+        font-size: 29px;
+    }
+    .logo h2{
+        font-size:20px ;
+    }
+    .menu_bar{
+        font-size: 17px;
+    }
+    .content{
+        flex-direction: column-reverse;
+    }
+    .content h3{
+        width: 100%;
+        margin-left: 50px;
+        margin-top: 0px;
+        padding-right: 20px;
+        font-size: 18px;
+    }
+    .profile img{
+        width: 150px;
+        height: 150px;
+    }
+    .profile{
+        width: 112%;
+        height: 35vh;
+    padding: 20px;
+    margin-top: 40px;
+        text-align: center;
+    }
+    .btn_about{
+        width: 120px ;
+    height: 30px;
+        font-size: 16px;
+    }
+    .btn_spn{
+        padding-top: 20px;
+        justify-content: center;
+    }
+    .high{
+        font-size: 23px;
+    }
+    .fa-user{
+        font-size: 16px;
+        width: 26px;
+        padding: 5px;
+    }
+}

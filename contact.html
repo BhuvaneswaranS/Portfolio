@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="./contact.css" />
+    <script
+      src="https://kit.fontawesome.com/81eaf25bb3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="overAll">
+      <div class="left">
+        <!-- Contact Info -->
+        <h1>Get In Touch!</h1>
+        <p><i class="far fa-address-card"></i> Name: Bhuvaneswaran</p>
+        <p>
+          <i class="fas fa-phone"></i> Phone Number : +91 7358233982
+        </p>
+        <p><i class="far fa-envelope"></i> Email : bhuvanesit09112001@gmail.com</p>
+        <!-- Social Media Icons -->
+        <div class="socialMediaIcons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+<!-- Right Side Form -->
+      <div class="right">
+        <form >
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="firstname" required/>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lastname" />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required/>
+            <label for="subject">Subject:</label>
+            <select id="subject" name="subject">
+                <option value="product">Product Enquiry</option>
+                <option value="service">Service Enquiry</option>
+                <option value="other">Other Query</option>
+            </select>
+            <label for="msg">Message:</label>
+            <textarea id="msg" name="message" rows="6" cols="30" required></textarea>
+            <input type="submit" value="Submit"/>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
